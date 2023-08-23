@@ -47,7 +47,7 @@
 🛠 Backend 개발 환경
 | 기술스택 | 버전 |
 | ------------ | ------------- |
-| springframework.bootl | 2.7.10 |
+| springframework.boot | 2.7.10 |
 | java | 11 |
 | CSS | 3 |
 | HTML | 5 |

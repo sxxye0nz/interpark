@@ -47,7 +47,7 @@
 🛠 Backend 개발 환경
 | 기술스택 | 버전 |
 | ------------ | ------------- |
-| springframework.bootl | 2.7.12 |
+| springframework.bootl | 2.7.10 |
 | java | 11 |
 | CSS | 3 |
 | HTML | 5 |
@@ -84,6 +84,16 @@
 | 조회 | /mymemo/{no} | get |
 | 수정 | /mymemo/{no} | put |
 | 삭제 | /mymemo/{no} | delete |
+
+#게시관련
+| 기능 | url | 요청방식 |
+| ------------ | ------------- | ------------- |
+| 작성 | /notice-write | get |
+| 등록 | /notice-save | post |
+| 조회 | /notice | get |
+| 상세조회 | /notice/{no} | get |
+| 수정 | /notice/{no} | put |
+| 삭제 | /notice/{no} | delete |
 
 #댓글관련
 | 기능 | url | 요청방식 |

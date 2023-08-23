@@ -57,6 +57,46 @@
 | Maria DB | 10.11 |
 | Spring Security | 5.8.4 |
 ---
+👏 API URL
+#유저관련
+| 기능 | url | 요청방식 |
+| ------------ | ------------- | ------------- |
+| 회원가입 | /signup | get |
+| 로그인 | /login | get |
+| VIP 구독 | /sub | get |
+| 로그아웃 | /logout | post |
+
+#상품관련
+| 기능 | url | 요청방식 |
+| ------------ | ------------- | ------------- |
+| 작성 | /products-registration | get |
+| 등록 | /products-save | post |
+| 조회 | /products-list | get |
+| 상세조회 | /products/{no} | get |
+
+#메모관련
+| 기능 | url | 요청방식 |
+| ------------ | ------------- | ------------- |
+| 목록 | /mymemo-list | get |
+| 작성 | /mymemo | get |
+| 등록 | /mymemo | post |
+| 조회 | /mymemo/{no} | get |
+| 수정 | /mymemo/{no} | put |
+| 삭제 | /mymemo/{no} | delete |
+
+#댓글관련
+| 기능 | url | 요청방식 |
+| ------------ | ------------- | ------------- |
+| 등록 | /reply/write | post |
+
+#상품관련
+| 기능 | url | 요청방식 |
+| ------------ | ------------- | ------------- |
+| 작성 | /products-registration | get |
+| 등록 | /products-save | post |
+| 조회 | /products-list | get |
+| 상세조회 | /products/{no} | get |
+---
 💻ERD
 ![image](https://github.com/sxxye0nz/interpark/assets/105630255/da5838cc-a7ca-43e3-999c-f79484424aee)
 

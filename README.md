@@ -43,3 +43,20 @@
 - ~~CRUD 중 게시글 조회, 등록~~
 - ~~CRUD 중 게시글 수정, 삭제 완성~~
 - ~~게시글 상세보기 페이지 구현 , 게시글 제목(title), 작성자(id), 내용(content), 작성일(created_date), 수정일(updated_date) 불러오기~~
+---
+🛠 Backend 개발 환경
+| 기술스택 | 버전 |
+| ------------ | ------------- |
+| springframework.bootl | 2.7.12 |
+| java | 11 |
+| CSS | 3 |
+| HTML | 5 |
+| Amazon Linux | 2 |
+| Linux 커널 | 5.10.179-168.710.amzn2.x86_64 |
+| apache-tomcat | 9.0.73 |
+| Maria DB | 10.11 |
+| Spring Security | 5.8.4 |
+---
+💻ERD
+![image](https://github.com/sxxye0nz/interpark/assets/105630255/da5838cc-a7ca-43e3-999c-f79484424aee)
+

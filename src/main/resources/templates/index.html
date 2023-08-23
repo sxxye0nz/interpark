@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{ layout/layout :: basic(~{::head}, ~{::main}) }">
+<head>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/visual.js"></script>
+</head>
+<main>
+	<h1>메인영역</h1>
+	<div class="wrap main-center">
+		<!-- 이벤트 배너 슬라이드 -->
+		<div class = "slide1">
+			<div class = "images1 flex">
+				<div class = "slide1Img"><img src="/images/index/event-img1.jpg"></div>
+				<div class = "slide1Img"><img src="/images/index/event-img2.jpg"></div>
+				<div class = "slide1Img"><img src="/images/index/event-img3.jpg"></div>
+				<div class = "slide1Img"><img src="/images/index/event-img4.jpg"></div>
+				<div class = "slide1Img"><img src="/images/index/event-img5.jpg"></div>
+			</div>
+			<button class = "back1"><strong>&lt;</strong></button>
+			<button class = "next1"><strong>&gt;</strong></button>
+		</div>
+		<!-- 이벤트 배너 슬라이드 끝 -->
+		<section id = "shoppingRecommend">
+			<h2>쇼핑 추천</h2>
+			<p>할인이 쎄다! 지금, 특가 상품을 확인하세요.</p>
+			<div class = "menuChoiceBtn">
+				<button><span>쎈딜</span></button>
+				<button><span>베스트</span></button>
+				<button><span>직구BEST</span></button>
+				<button><span>이사&혼수</span></button>
+				<button><span>소담상회</span></button>
+			</div>
+			<div class = "slide2">
+				<div class = "images2">
+					<img src="/images/index/shoppingRecommend-img1.jpg">
+					<img src="/images/index/shoppingRecommend-img2.jpg">
+					<img src="/images/index/shoppingRecommend-img3.jpg">
+					<img src="/images/index/shoppingRecommend-img4.jpg">
+					<img src="/images/index/shoppingRecommend-img5.jpg">
+					<img src="/images/index/shoppingRecommend-img6.jpg">
+					<img src="/images/index/shoppingRecommend-img7.jpg">
+					<img src="/images/index/shoppingRecommend-img8.jpg">
+				</div>
+				<button class = "back2">&lt;</button>
+				<button class = "next2">&gt;</button>
+			</div>
+			<button class ="sectionLastBtn">쇼핑 홈 바로가기<span> ></span></button>
+		</section>
+   		<section id = "ticketRanking">
+			<h2>티켓 랭킹</h2>
+			<p>오늘 뭐볼까? 지금 HOT한 공연</p>
+			<div class = "menuChoiceBtn">
+				<button><span>뮤지컬</span></button>
+				<button><span>콘서트</span></button>
+				<button><span>연극</span></button>
+				<button><span>클래식/무용</span></button>
+				<button><span>레저/캠핑</span></button>
+				<button><span>전시/행사</span></button>
+				<button><span>아동/가족</span></button>
+			</div>
+			<div class = "slide3">
+				<div class = "images3">
+					<ol>
+						<a href = "#" ><img src="/images/index/interparkLive-img1.gif"></a>
+						<a href = "#" ><img src="/images/index/interparkLive-img2.gif"></a>
+						<a href = "#" ><img src="/images/index/interparkLive-img3.gif"></a>
+						<a href = "#" ><img src="/images/index/interparkLive-img4.gif"></a>
+					</ol>
+				</div>
+					<button class = "back3">&lt;</button>
+					<button class = "next3">&gt;</button>
+			</div>
+			<button class ="sectionLastBtn">티켓 홈 바로가기<span> ></span></button>
+		</section>
+<!-- 		<section id = "interparkLive">
+			<h2>인터파크 라이브 이미지</h2>
+			<ol class = "flex center">
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+			</ol>
+			<button class ="sectionLastBtn">인터파크 라이브 바로가기<span> ></span></button>
+		</section>
+		<section id = "recommendBook">
+			<h2>오늘의 도서</h2>
+			<p>지금 읽기 딱 좋은 책, 놓치지 마세요!</p>
+			<div class = "menuChoiceBtn">
+				<button><span>MD's pick</span></button>
+				<button><span>베스트셀러</span></button>
+				<button><span>신간추천</span></button>
+				<button><span>특가할인</span></button>
+			</div>
+			<ol class = "flex center">
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+			</ol>
+			<button class ="sectionLastBtn">티켓 홈 바로가기<span> ></span></button>
+		</section>
+		<section id = "event">
+			<h2>이벤트</h2>
+			<p>인터파크에서 할인혜택을 꼭 챙기세요.</p>
+			<ol class = "flex center">
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+				<li><a></a>이미지</li>
+			</ol>
+		</section>  -->
+	</div>
+</main>
+</html>

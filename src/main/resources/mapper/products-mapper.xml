@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.nowon.mapper.ProductsMapper">
+	<insert id="save">
+		insert into green_products(pname, price, pcontent, email)
+		values(#{pname}, #{price}, #{pcontent}, #{email})
+	</insert>
+	<select id="list" resultType="com.green.nowon.dto.ProductsDTO">
+		select * from green_products order by pcode desc
+	</select>
+	
+	<select id="findByPcode" resultType="com.green.nowon.dto.ProductsDTO">
+		select * from green_products
+		where pcode=#{pcode}
+	</select>
+</mapper>

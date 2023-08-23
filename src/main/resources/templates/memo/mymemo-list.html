@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="//www.thymeleaf.org" xmlns:sec="//www.thymeleaf.org/extras/spring-security">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<a href="/mymemo">글쓰기</a>
+		<a href="/">홈</a>
+		<table>
+			<tr>
+				<td>글번호</td>
+				<td>제목</td>
+				<!-- <td>내용</td> -->
+				<td>작성자</td>
+				<td>작성일자</td>
+				<!-- <td>수정일자</td> -->
+			</tr>
+			<tr th:each="dto :${list}">
+				<td><a th:href="${'/mymemo/' + dto.mno}" th:text="${dto.mno}"></a></td>
+				<td th:text="${dto.title}">제목</td>
+				<!-- <td th:utext="${dto.content}">내용</td> -->
+				<td th:text="${dto.email}">작성자</td>
+				<td th:text="${dto.createdDate}">작성일자</td>
+				<!-- <td th:text="${dto.updatedDate}">수정일자</td> -->
+			</tr>
+		</table>
+	</body>
+</html>

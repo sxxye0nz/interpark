@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+/* 보경님 작성 영역 */
+*{font-size: 15px;}
+#head {
+	border: 1px solid #e9e9e9;
+}
+header {
+	margin : 25px 0 0px; 
+}
+#head > header > div{
+	padding : 0 290px 0;
+}
+
+.header-top {
+	margin-bottom: 30px ;
+}
+
+.header-left > .wrap > a > img {
+	width: 120px;
+	height: 32px;
+	margin-right: 2rem;
+}
+
+.header-left > .search {
+	border: 1px solid #e9e9e9; 
+	border-radius: 50px;
+	width: 400px;
+	height: 50px;
+	padding: 14px;
+}
+.header-left > .wrap  >label >button{
+	width : 20px;
+	height : 20px;
+}
+.header-left> .wrap > button > img {
+	position: relative;
+    right: -160px;
+    top : 1px
+}
+	
+.header-right > ul > li >a{
+	margin-right:20px;
+	height: 30px;
+    display: inline-block;
+}
+.header-right > .menu-h > a{
+	height: 30px;
+    display: inline-block;
+}
+
+.menu-h:after{display:block; content:""; clear:both;}
+.menu-h:hover .drop {
+	display:block;
+	
+}
+.menu-h > div:hover .drop li:hover{
+	display:block;
+}
+
+.menu-h > div{
+	position: relative;
+	display: inline-block;
+}
+.menu-h > div > .drop{
+	display:none; 
+	position:absolute; 
+	left : -66px;
+	top : 28px;
+	width: 140px;
+	border: 1px solid #e9e9e9;
+	box-shadow: 0px 0px 5px #e9e9e9;
+	background-color : white;
+	border-radius: 20px;
+	text-align: center;
+	padding: 10px;
+}
+.menu-h > div > ul > li{
+	padding: 6px;
+}
+.menu-h > div > a > span {
+	font-size: 10px;
+}
+	
+.header-bottom > nav >ul:not(.tic) > li > a{
+	display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    
+}
+
+.header-bottom > nav >ul:not(.tic) > li > a:before{
+	content: "";
+	display : inline-block;
+	width : 30px;
+	height : 30px;
+	margin: 0 auto;
+	background-image: url("/images/투어.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	padding-right: 10px;
+}
+
+
+.header-bottom > nav >ul > li:nth-child(2) > a:before{background-image: url("/images/티켓.png");}	
+.header-bottom > nav >ul > li:nth-child(3) > a:before{background-image: url("/images/icon_shopping.png");}	
+.header-bottom > nav >ul > li:nth-child(4) > a:before{background-image: url("/images/icon_book.png");}
+.header-bottom > nav >ul > li:nth-child(5) > a:before{background-image: url("/images/icon_triple.png");}
+.header-bottom > nav >ul > li:nth-child(6) > a:before{background-image: url("/images/icon_nol.png");}
+
+.header-bottom > nav > ul > li > .hot {
+	background-image: url("/images/badge_hot.65abbe70.svg");
+	background-repeat: no-repeat;
+	font-size: 0;
+	display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    top: -22px;
+    left: -15px;
+}
+
+.header-bottom > nav > .tic > li > a{
+	position: relative;
+    top: 3px;
+    border-left: 1px solid #e9e9e9;
+    padding-left: 10px;
+}
+
+	
+.c-center{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}	
+	

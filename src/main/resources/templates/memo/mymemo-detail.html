@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="//www.thymeleaf.org" xmlns:sec="//www.thymeleaf.org/extras/spring-security">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+			<!-- include libraries(jQuery, bootstrap) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<!-- include summernote css/js -->
+	<link href="//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+	<script src="//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+	
+	<script type="text/javascript">
+	$(function(){
+		$('#summernote').summernote();
+		$("#btn-update").click(clickedBtnUpdate);
+		
+	});
+	
+	/*function buttonShow(){
+		//const update = document.getElementById('update');
+		
+		if(update.style.display !== 'none'){
+			update.style.display = 'none';
+		}else{
+			update.style.display='block'
+		}
+	}*/
+	
+
+	function clickedBtnUpdate(){
+		$("#basic").hide();
+		$("#update").show();
+	}
+	       
+	function clickedBtnCancel(){
+		$("#basic").show();
+		$("#update").hide();
+		//원본 텍스트 적용
+		//1.원본을 하나씩 읽어온다
+		var tit =  $("#tit").text();   //document.getElementById('tit');
+		var con =  $("#con").html();   //document.getElementById('con'); 
+		console.log(">>>"+con)
+		//2.원본값을 적용한다
+		$("#tit2").val(tit);
+		//$("#summernote").html(con);
+		$('.note-editable').html(con); //summernote이기때문에 summernote 안에있는 class로 부여
+	}
+	</script>
+
+
+</head>
+<body>
+	<h1>메모 상세페이지</h1>
+	<a href="/">홈</a>
+	
+	<section id="mymemo">
+		<div>
+		<table id="basic">
+			<tr class="flex">
+				<th>글번호</th>
+				<td th:text="${detail.mno}"></td>
+			</tr>
+			<tr class="flex">
+				<th>제목</th>
+				<td id="tit" th:text="${detail.title}"></td>
+			</tr>
+			<tr class="flex">
+				<th>내용</th>
+				<td id="con" th:utext="${detail.content}"></td>
+			</tr>
+			<tr class="flex">
+				<th>작성자</th>
+				<td th:text="${detail.email}"></td>
+			</tr>
+			<tr class="flex">
+				<th>작성일자</th>
+				<td th:text="${detail.createdDate}"></td>
+			</tr>
+			<tr class="flex">
+				<th>수정일자</th>
+				<td th:text="${detail.updatedDate}"></td>
+			</tr>
+			
+			<!--관리자 일 때만 보이는 화면-->
+			<th:block sec:authorize="isAuthenticated()">
+				<tr>
+					<td colspan="2" class="flex">
+						<button type="button" id="btn-update" >게시글수정</button>
+						<form th:action="|/mymemo/${detail.mno}|" method="post">
+							<input type="hidden" name="_method" value="DELETE">
+							<button>게시글삭제</button>
+						</form>
+					</td>
+				</tr>
+			
+		</table>
+	</div>
+
+	<!-- ////////수정 버튼 클릭시 화면/////////////////////// -->
+		<div id = "update" style="display: none">
+			<form id="form-update" th:action="@{|/mymemo/${detail.mno}|}" method="post">			
+				<table >
+					<tr>
+						<th>게시글 번호</th>
+						<td th:text="${detail.mno}">1</td>
+					</tr>
+					<tr>
+						<th>게시글 최초 등록일</th>
+						<td th:text="${detail.createdDate}">생성일</td>
+					</tr>
+					<tr>
+						<th>게시글 수정 등록일</th>
+						<td th:text="${detail.updatedDate}">수정일</td>
+					</tr>
+					<tr>
+						<th>게시글 제목</th>
+						<td>
+							<input id="tit2" type="text" name="title" th:value="${detail.title}">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" >
+							<textarea  id="summernote" name="content">[(${detail.content})]</textarea>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" >
+							
+							<input type="hidden" name="no" th:value="${detail.mno}">
+							<button type="button" id="BtnCancel" onclick="clickedBtnCancel()">취소</button>
+							<input type="hidden" name="_method" value="PUT"> 
+							<input type="hidden" th:name="${_csrf.parameterName}"
+								th:value="${_csrf.token}"/>
+							<button type="submit">수정완료</button>
+						</td>
+					</tr>
+				</table>		
+			</form>
+			
+		</div>
+	</section>
+	
+</body>
+</html>

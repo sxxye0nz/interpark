@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="//www.thymeleaf.org" xmlns:sec="//www.thymeleaf.org/extras/spring-security">
+<div id="head">
+<header><!-- 보경님 작성 영역 -->
+	<h1>헤더영역</h1>
+	<div class="wrap">
+		<div class="wrap header-top flex between">
+			<div class="wrap header-left flex ">
+				<div class="wrap c-center">
+					<a href="/"><img alt="인터파크" src="/images/ci_ko.6f0914fd.svg"></a>
+				</div>
+				<div class="search wrap flex">
+					<label>
+						<input type="search" placeholder="NOL 카드로 항공권 특가">
+					</label>
+					<button><img alt="찾기버튼" src="/images/btn.svg"></button>
+					
+				</div>
+			</div>
+			<div class="wrap header-right c-center">
+				<ul class="flex center">
+					<li class="flex">
+						<a sec:authorize="isAnonymous()" href="/login">로그인</a>
+						<a sec:authorize="isAuthenticated()" href="/sub">구독하기</a>
+						<div class="flex" sec:authorize="isAuthenticated()">
+							<span sec:authorize="hasRole('ADMIN')">관리자</span>
+							<span sec:authorize="hasRole('VIP')">VIP</span>
+							<span sec:authorize="hasRole('USER') and !hasRole('VIP')">일반회원</span>
+							<span sec:authentication="name"></span>
+							<a href="/products-registration">상품등록</a>
+							<form action="/logout" method="post">
+								<input type="hidden" th:name="${_csrf.parameterName}"
+									th:value="${_csrf.token}"/>
+								<button>로그아웃</button>
+							</form>
+						</div>
+					</li>
+					<li><a href="/products-list">상품리스트</a></li>
+					<li><a href="/signup">회원가입</a></li>
+					<li class="menu-h">
+						<div class="drop-p">
+							<a href="/mymemo-list">마이페이지 <span>∨</span></a>
+							<ul class="drop">
+								<li><a href="#"><strong>투어</strong> 마이페이지</a></li>
+								<li><a href="#"><strong>티켓</strong> 마이페이지</a></li>
+								<li><a href="#"><strong>쇼핑</strong> 마이페이지</a></li>
+								<li><a href="#"><strong>도서</strong> 마이페이지</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="wrap header-bottom">
+			<nav class="flex">
+				<ul class=" flex">
+					<li><a href="#">투어</a></li>
+					<li><a href="#">티켓</a></li>
+					<li><a href="#">쇼핑</a></li>
+					<li><a href="#">도서</a></li>
+					<li><a href="#">트리플</a></li>
+					<li>
+						<a href="#">NOL혜택</a>
+						<i class="hot">HOT</i>
+					</li>
+				</ul>
+				<ul class="tic">
+					<li><a href="#">티켓오픈</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+</div>
+</html>

@@ -1,0 +1,88 @@
+@charset "UTF-8";
+*{box-sizing: content-box;}
+input{border: none;outline: none;}
+
+
+
+/* label 값 조정 */
+.in-title{
+	position: relative;
+}
+
+.in-title > label{
+	position: absolute;
+	top: -10%;
+	width: 200px;
+}
+
+/* 테두리 보더, 회원가입폼 가운데에 위치 */
+.bod{
+	position : absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	border: 1px solid #a9a9a9;
+	border-radius: 10px;
+	width: 40%	
+	
+	}
+.wrap > .logo {
+	font-size: 50px;
+	font-weight: 900;
+	text-align: center;
+	
+}
+
+.in-box{
+	padding: 10px 14px;
+	border: 1px solid #a9a9a9;
+	border-radius : 2px;
+	display: flex;
+	justify-content: space-between;
+	width: 50%
+	
+}
+
+.in-title{
+	font-weight: 700;
+	
+	/* padding: 1.5em 0 0.5em; */
+}
+
+/* 텍스트박스 크기 box 크기와 일치시키기 */
+body > div > form > div > p > input {
+	width: 100%;
+}
+
+/* 텍스트상자, 로그인버튼 가운데정렬 */
+.log > .wrap{
+	display: flex;
+	justify-content: center;
+	margin-top: 16px;
+	
+}
+
+/* 회원가입 버튼 */
+.btn-shape {
+    display: block;
+    width: 100%;
+    padding: 15px 0 15px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    border-radius : 2px;
+    width: 60%;
+}
+/* 회원가입 버튼 색 */
+.btn-color{
+	color: white;
+	background-color: #0080ff;
+	border: solid 1px rgba(0,0,0,.08);
+	
+}
+
+body > div > form > div > button{
+	margin-top : 16px;
+	margin-bottom: 32px;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="//www.thmeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<div>
+			<form action="/sub" method="post">
+				<p>구독하시면 할인 등 혜택이 주어집니다</p>
+				<input type="hidden" th:name="${_csrf.parameterName}"
+						th:value="${_csrf.token}"/>
+				<input type="submit" value="구독하기" >	
+			</form>		
+		</div>
+	</body>
+</html>

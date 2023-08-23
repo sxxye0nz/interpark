@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.nowon.mapper.LoginMapper">
+	<insert id="save" >
+		<selectKey keyProperty="no" resultType="long" order="BEFORE">
+   			SELECT nextval(seq_my_member)
+ 		</selectKey>
+		insert into green_member(no, email,pass)
+		values(#{no},#{email},#{pass})
+	</insert>
+
+	<resultMap id="logResult" type="com.green.nowon.dto.MemberDTO">
+		<id column="no" property="no"/>
+		<result column="email" property="email"/>
+		<result column="pass" property="pass"/>
+		<result column="nick_name" property="nickName"/>
+		<collection property="roles" ofType="com.green.nowon.security.MyRole">
+			<result column="roles" property="roleName"/>
+		</collection>
+		
+	</resultMap>
+	<select id="findById" resultMap="logResult">
+		select m.*, r.* from green_member m 
+		LEFT JOIN my_role r
+		ON m.no = r.green_member_entity_no
+		where email=#{email}
+	</select>
+
+</mapper>

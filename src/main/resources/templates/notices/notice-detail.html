@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns:th="//www.thymeleaf.org" xmlns:sec="//www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- include libraries(jQuery, bootstrap) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- include summernote css/js -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+	
+	<!-- <link rel="stylesheet" href="/css/board/detail.css"> -->
+
+	<script type="text/javascript">
+	$(function(){
+		$('#summernote').summernote();
+		$("#btn-update").click(clickedBtnUpdate);
+		
+	});
+	
+	function buttonShow(){
+		const update = document.getElementById('update');
+		
+		if(update.style.display !== 'none'){
+			update.style.display = 'none';
+		}else{
+			update.style.display='block'
+		}
+	}
+	
+
+	function clickedBtnUpdate(){
+		$("#basic").hide();
+		$("#form-update").show();
+	}
+	       
+	function clickedBtnCancel(){
+		$("#basic").show();
+		$("#form-update").hide();
+	}
+	</script>
+	
+
+</head>
+<body>
+	<h1>게시글 상세 페이지</h1>
+	<div class="wrap view-size">		
+		<section id = "detail">
+			<h1>게시글 정보</h1>
+				<a href="/notice">이전으로</a>
+			<div id="wrap">
+				<table id="basic">
+					<tr>
+						<th>게시글 번호</th>
+						<td th:text="${detail.no}"></td>
+					</tr>
+					<tr>
+						<th>게시글 작성자</th>
+						<td th:text="${detail.email}"></td>
+					</tr>
+					<tr>
+						<th>게시글 최초 등록일</th>
+						<td th:text="${detail.createdDate}"></td>
+					</tr>
+					<tr>
+						<th>게시글 수정 등록일</th>
+						<td th:text="${detail.updatedDate}"></td>
+					</tr>
+					<tr>
+						<th>게시글 제목</th>
+						<td th:text="${detail.title}"></td>
+					</tr>
+					
+					<tr>
+						<th>게시글 내용</th>
+						<td colspan="2" th:utext="${detail.content}"></td>
+					</tr>
+			<!--관리자 일 때만 보이는 화면-->
+			<th:block sec:authorize="isAuthenticated()">
+					<tr>
+						<td colspan="2" class="flex">
+							<button type="button" id="btn-update" onclick='buttonShow()'>게시글수정</button>
+							<form th:action="|/notice/${detail.no}|" method="post">
+								<input type="hidden" name="_method" value="DELETE">
+								<button>게시글삭제</button>
+							</form>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- ////////수정 버튼 클릭시 화면/////////////////////// -->
+			<div id = "update" style="display: none">
+				<form id="form-update" th:action="@{|/notice/${detail.no}|}" method="post">			
+					<table >
+						<tr>
+							<th>게시글 번호</th>
+							<td th:text="${detail.no}">1</td>
+						</tr>
+						<tr>
+							<th>게시글 최초 등록일</th>
+							<td th:text="${detail.createdDate}">생성일</td>
+						</tr>
+						<tr>
+							<th>게시글 수정 등록일</th>
+							<td th:text="${detail.updatedDate}">수정일</td>
+						</tr>
+						<tr>
+							<th>게시글 제목</th>
+							<td>
+								<input type="text" name="title" th:value="${detail.title}">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" >
+								<textarea id="summernote" name="content">[(${detail.content})]</textarea>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" >
+								<input type="hidden" name="_method" value="PUT"> 
+								<input type="hidden" name="no" th:value="${detail.no}">
+								<button type="button" onclick="clickedBtnCancel()">취소</button>
+								<button type="submit">수정완료</button>
+							</td>
+						</tr>
+					</table>		
+				</form>
+			</div>
+			</th:block>
+		</section>
+	</div>
+	
+</body>
+</html>

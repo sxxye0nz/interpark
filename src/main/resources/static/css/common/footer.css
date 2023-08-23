@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+/* 소연님 작성 영역 */
+footer {
+	/*height: 398px;
+	position: relative;
+	transform : translateY(-100%);*/
+	padding: 0;
+	background-color: #fff;
+}
+
+footer>.footer>.footer_menu{
+	border-top: 2px solid #a9a9a9;
+	border-bottom: 2px solid #a9a9a9;
+}
+
+footer>.footer>.footer_menu>.footer_menu_line {
+	list-style: none;
+	width: 1280px;
+	margin: 0 auto;
+	
+	padding: 20px 0px;
+}
+
+footer>.footer>.footer_menu>.footer_menu_line>li {
+	/* float: left; */
+	font-size: 20px;
+	border-left: 2px solid #a9a9a9;
+	text-align: center;
+	position: relative;
+}
+
+footer>.footer>.footer_menu>.footer_menu_line>li:first-child {
+	border-left: none;
+}
+
+.check-btn {
+	display: none;
+	position: absolute;
+}
+
+footer>.footer>.footer_menu>.footer_menu_line>li:hover  .menu {
+	display: block;
+}
+
+.menu {
+	display: none;
+	margin-top: 15px;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	z-index: 1;
+}
+
+.menu a {
+	font-size: 18px;
+	color: #292929;
+	line-height: 15px;
+}
+
+.Inter {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	padding: 0px 20px;
+}
+
+/*InterPark*//*InterPark*//*InterPark*//*InterPark*//*InterPark*//*InterPark*//*InterPark*/
+.InterPark {
+	float: left;
+	border-right: 2px solid #a9a9a9;
+	padding: 20px;
+}
+/*InterPark*//*InterPark >InterPark_adders*/
+.InterPark>.InterPark_adders ul {
+	list-style: none;
+}
+
+.InterPark>.InterPark_adders ul>li {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.InterPark>.InterPark_adders ul>li::after {
+	content: "|";
+	float: right;
+	display: block;
+}
+
+.InterPark>.InterPark_adders ul>li:last-child::after {
+	content: "";
+}
+
+.InterPark>.InterPark_adders ul>li>a {
+	margin: 5px;
+}
+/*InterPark*//*InterPark >InterPark_ServiceCenter*/
+.InterPark>.InterPark_ServiceCenter {
+	margin-top: 10px;
+}
+
+.InterPark>.InterPark_ServiceCenter ul {
+	list-style: none;
+}
+
+.InterPark>.InterPark_ServiceCenter ul>li {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.InterPark>.InterPark_ServiceCenter ul>li::after {
+	content: "|";
+	float: right;
+	display: block;
+}
+
+.InterPark>.InterPark_ServiceCenter ul>li:last-child::after {
+	content: "";
+}
+
+.InterPark>.InterPark_ServiceCenter ul>li>a {
+	margin: 5px;
+}
+/*InterPark*//*InterPark >InterPark_FinancialDispute*/
+.InterPark>.InterPark_FinancialDispute {
+	margin-top: 10px;
+}
+
+.InterPark>.InterPark_FinancialDispute ul {
+	list-style: none;
+}
+
+.InterPark>.InterPark_FinancialDispute ul>li {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.InterPark>.InterPark_FinancialDispute ul>li::after {
+	content: "|";
+	float: right;
+	display: block;
+}
+
+.InterPark>.InterPark_FinancialDispute ul>li:last-child::after {
+	content: "";
+}
+
+.InterPark>.InterPark_FinancialDispute ul>li>a {
+	margin: 5px;
+}
+/*InterPark*//*InterPark >InterPark_text*/
+.InterPark>.InterPark_text p {
+	margin: 5px;
+}
+
+/*InterParkCammers*//*InterParkCammers*//*InterParkCammers*//*InterParkCammers*//*InterParkCammers*/
+.InterParkCammers {
+	float: right;
+	padding: 20px;
+}
+/*InterParkCammers*//*InterParkCammers >InterParkCammers_adders*/
+.InterParkCammers> .InterParkCammers_adders ul {
+	list-style: none;
+}
+
+.InterParkCammers> .InterParkCammers_adders ul> li {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.InterParkCammers>.InterParkCammers_adders ul >li::after {
+	content: "|";
+	float: right;
+	display: block;
+}
+
+.InterParkCammers>.InterParkCammers_adders ul >li:last-child::after {
+	content: "";
+}
+
+.InterParkCammers>.InterParkCammers_adders ul >li >a {
+	margin: 5px;
+}
+/*InterParkCammers*//*InterParkCammers >InterParkCammers_ServiceCenter*/
+.InterParkCammers>.InterParkCammers_ServiceCenter {
+	margin-top: 10px;
+}
+
+.InterParkCammers>.InterParkCammers_ServiceCenter ul {
+	list-style: none;
+}
+
+.InterParkCammers>.InterParkCammers_ServiceCenter ul >li {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.InterParkCammers>.InterParkCammers_ServiceCenter ul >li::after {
+	content: "|";
+	float: right;
+	display: block;
+}
+
+.InterParkCammers>.InterParkCammers_ServiceCenter ul >li:last-child::after {
+	content: "";
+}
+
+.InterParkCammers>.InterParkCammers_ServiceCenter ul >li >a {
+	margin: 5px;
+}
+/*InterParkCammers*//*InterParkCammers >InterParkCammers_FinancialDispute*/
+.InterParkCammers>.InterParkCammers_FinancialDispute {
+	margin-top: 10px;
+}
+
+.InterParkCammers>.InterParkCammers_FinancialDispute ul {
+	list-style: none;
+}
+
+.InterParkCammers>.InterParkCammers_FinancialDispute ul>li {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.InterParkCammers>.InterParkCammers_FinancialDispute ul >li::after {
+	content: "|";
+	float: right;
+	display: block;
+}
+
+.InterParkCammers>.InterParkCammers_FinancialDispute ul >li:last-child::after {
+	content: "";
+}
+
+.InterParkCammers>.InterParkCammers_FinancialDispute ul >li >a {
+	margin: 5px;
+}
+/*InterParkCammers*//*InterParkCammers >InterParkCammers_text*/
+.InterParkCammers>.InterParkCammers_text p {
+	margin: 5px;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.nowon.mapper.ReplyMapper">
+	<insert id="replySave">
+		insert into green_reply(pcode, email, reply)
+		values(#{pcode}, #{email}, #{reply})
+	</insert>
+	
+	<select id="replyList" resultType="com.green.nowon.dto.ReplyDTO">
+		select * from green_reply
+		where pcode=#{pcode};
+	</select>
+</mapper>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="//www.thymeleaf.org" xmlns:sec="//www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section id="notices">
+	<h1>게시판</h1>
+	<!-- 게시글 작성 버튼 : 관리자 일 때만 작성 가능하도록 관리자 일 때 보이게, 관리자가 아닐 때 보이지 않게 설정  -->
+	<a href="/notice-write" sec:authorize = "hasRole('ADMIN')">게시글 작성</a>
+	<a href="/">홈</a>
+	
+	<table>
+		<tr>
+			<td> 게시글번호 </td>
+			<td> 게시글제목 </td>
+			<td> 게시글작성자 </td>
+			<td> 게시글작성일 </td>
+		</tr>
+		<tr th:if="${#lists.isEmpty(list)}">
+					<th colspan="4">게시글이 존재하지 않습니다.</th>
+		</tr>
+		<tr th:each="dto : ${list}">
+			<td><a th:href="${'/notice/' + dto.no}" th:text="${dto.no}"></a></td>
+			<td th:text="${dto.title}">게시글 제목</td>
+			<td th:text="${dto.email}">게시글 작성자</td>
+			<td th:text="${dto.updatedDate}">게시글 작성일</td>
+		</tr>
+	</table>
+	</section>
+</body>
+</html>

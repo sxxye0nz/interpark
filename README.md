@@ -90,13 +90,6 @@
 | ------------ | ------------- | ------------- |
 | 등록 | /reply/write | post |
 
-#상품관련
-| 기능 | url | 요청방식 |
-| ------------ | ------------- | ------------- |
-| 작성 | /products-registration | get |
-| 등록 | /products-save | post |
-| 조회 | /products-list | get |
-| 상세조회 | /products/{no} | get |
 ---
 💻ERD
 ![image](https://github.com/sxxye0nz/interpark/assets/105630255/da5838cc-a7ca-43e3-999c-f79484424aee)

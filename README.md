@@ -66,7 +66,7 @@
 - ~~CRUD 중 게시글 수정, 삭제 완성~~
 - ~~게시글 상세보기 페이지 구현 , 게시글 제목(title), 작성자(id), 내용(content), 작성일(created_date), 수정일(updated_date) 불러오기~~
 ---
-🛠 Backend 개발 환경
+## 🛠 Backend 개발 환경
 | 기술스택 | 버전 |
 | ------------ | ------------- |
 | springframework.boot | 2.7.10 |

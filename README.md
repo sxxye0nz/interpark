@@ -103,6 +103,7 @@
 | 목록 | /mymemo-list | get |
 | 작성 | /mymemo | get |
 | 등록 | /mymemo | post |
+
 | 조회 | /mymemo/{no} | get |
 | 수정 | /mymemo/{no} | put |
 | 삭제 | /mymemo/{no} | delete |
@@ -124,5 +125,5 @@
 
 ---
 💻ERD
-![image](https://github.com/sxxye0nz/interpark/assets/105630255/da5838cc-a7ca-43e3-999c-f79484424aee)
+![interpark](https://github.com/sxxye0nz/interpark/assets/105630255/281ea6fa-90a4-47b5-9206-7bc2ab1a4cf4)
 

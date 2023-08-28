@@ -1,6 +1,6 @@
 # 소셜 커머스 인터파크 / 쇼핑몰 구현 팀 프로젝트
 ---
-# 주 기능 구현
+## 주 기능 구현
 1. 로그인 및 회원가입 
 - Security를 적용한 고객 회원가입과 로그인 기능 구현 및 권한 부여 
 - 회원 정보 비밀번호를 암호화하여 보안등급 활용
@@ -18,9 +18,9 @@
 - 공지사항 게시판 페이지 구현 
 - SQL을 활용한 게시판 CRUD
 ---
-# 개발 목적
-: back-end 개발자로서 front-end 개발자를 이해할 수 있는 full-stack 경험
-: GIT TEAM 협업 관리
+## 개발 목적
+- back-end 개발자로서 front-end 개발자를 이해할 수 있는 full-stack 경험
+- GIT TEAM 협업 관리
 ---
 # to_do(공통)
 
@@ -79,9 +79,9 @@
 | Maria DB | 10.11 |
 | Spring Security | 5.8.4 |
 ---
-👏 API URL
+## 👏 API URL
 
-# 유저관련
+### 유저관련
 | 기능 | url | 요청방식 |
 | ------------ | ------------- | ------------- |
 | 회원가입 | /signup | get |
@@ -89,7 +89,7 @@
 | VIP 구독 | /sub | get |
 | 로그아웃 | /logout | post |
 
-# 상품관련
+### 상품관련
 | 기능 | url | 요청방식 |
 | ------------ | ------------- | ------------- |
 | 작성 | /products-registration | get |
@@ -97,7 +97,7 @@
 | 조회 | /products-list | get |
 | 상세조회 | /products/{no} | get |
 
-# 메모관련
+### 메모관련
 | 기능 | url | 요청방식 |
 | ------------ | ------------- | ------------- |
 | 목록 | /mymemo-list | get |
@@ -108,7 +108,7 @@
 | 수정 | /mymemo/{no} | put |
 | 삭제 | /mymemo/{no} | delete |
 
-# 게시글관련
+### 게시글관련
 | 기능 | url | 요청방식 |
 | ------------ | ------------- | ------------- |
 | 작성 | /notice-write | get |
@@ -118,12 +118,12 @@
 | 수정 | /notice/{no} | put |
 | 삭제 | /notice/{no} | delete |
 
-# 댓글관련
+### 댓글관련
 | 기능 | url | 요청방식 |
 | ------------ | ------------- | ------------- |
 | 등록 | /reply/write | post |
 
 ---
-💻ERD
+## 💻ERD
 ![interpark](https://github.com/sxxye0nz/interpark/assets/105630255/281ea6fa-90a4-47b5-9206-7bc2ab1a4cf4)
 

@@ -103,7 +103,6 @@
 | 목록 | /mymemo-list | get |
 | 작성 | /mymemo | get |
 | 등록 | /mymemo | post |
-
 | 조회 | /mymemo/{no} | get |
 | 수정 | /mymemo/{no} | put |
 | 삭제 | /mymemo/{no} | delete |
